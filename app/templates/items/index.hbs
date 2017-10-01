@@ -1,0 +1,18 @@
+{{#link-to "index" class="fa fa-arrow-circle-o-left goback fa-2x"}} Главная{{/link-to}}
+<div class="filter-box">
+    {{multiselect-checkboxes options=allfactories labelProperty='name' valueProperty='id' selection=selectedFilter onchange=(action 'updateSelection')}}
+</div>
+<div class="container">
+    <div id="spinner"></div>
+    <div id="factories" class="animated fadeIn">
+        {{#each factories as |factory|}}
+                <div class="row" id="factory_{{factory.id}}">
+                    <legend>Кухни {{factory.name}}</legend>
+                    {{#each items as |itemUnit|}}
+                        {{item-list item=itemUnit factoryId=factory.id}}
+                    {{/each}}
+                </div>
+        {{/each}}
+    </div>
+</div>
+{{outlet}}

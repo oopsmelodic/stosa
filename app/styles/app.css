@@ -1,0 +1,140 @@
+/*bootstrap-changes*/
+
+.navbar{
+    margin-bottom: 0px!important;
+
+}
+.navbar-logo{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.navbar img{
+    -webkit-box-shadow: 8px 8px 5px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 8px 8px 5px -4px rgba(0,0,0,0.75);
+    box-shadow: 8px 8px 5px -4px rgba(0,0,0,0.75);
+}
+
+.container{
+    margin-top: 100px;
+}
+.items-img{
+    width:100%;
+    height: 180px;
+}
+
+/*slider - css*/
+
+.swiper-container-vertical {
+    height: 900px;
+}
+
+.swiper-wrapper .swiper-slide {
+    color: #fff;
+    height: 900px;
+    text-align: center;
+}
+
+.swiper-slide-active {
+    font-weight: bold;
+}
+
+.swiper-wrapper .swiper-slide img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+    background: #fff;
+}
+
+.swiper-wrapper .swiper-slide:nth-of-type(1):not(.myslide),
+.swiper-wrapper .swiper-slide.myslide-1 {
+    background-color: #00A0B0;
+}
+
+.swiper-wrapper .swiper-slide:nth-of-type(2):not(.myslide),
+.swiper-wrapper .swiper-slide.myslide-2 {
+    background-color: #6A4A3C;
+}
+
+.swiper-wrapper .swiper-slide:nth-of-type(3):not(.myslide),
+.swiper-wrapper .swiper-slide.myslide-3 {
+    background-color: #CC333F;
+}
+
+.swiper-wrapper .swiper-slide:nth-of-type(4):not(.myslide),
+.swiper-wrapper .swiper-slide.myslide-4 {
+    background-color: #EB6841;
+}
+
+.swiper-wrapper .swiper-slide:nth-of-type(5):not(.myslide),
+.swiper-wrapper .swiper-slide.myslide-5 {
+    background-color: #EDC951;
+}
+
+@media screen and (max-width: 840px) {
+    .measure {
+        padding: 1em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .measure h1 {
+        margin: 1.5em 0;
+        font-size: 2em;
+    }
+}
+
+.slide-label{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    background-color: #bdbdbd;
+    padding: 30px;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+.slide-label legend{
+    color: #fff;
+    font-size: 45px;
+    border-bottom: 4px solid #f1f1f1;
+}
+
+.slide-label button{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    border-radius: 0;
+}
+.goback{
+    position: fixed;
+    left: 10%;
+}
+.filter-box{
+    position: fixed;
+    left: 5%;
+    top: 20%;
+}
+
+/*footer {*/
+    /*position: absolute;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*padding: 1rem;*/
+    /*background-color: #efefef;*/
+    /*text-align: center;*/
+/*}*/
+/*body {*/
+    /*position: relative;*/
+    /*margin: 0;*/
+    /*padding-bottom: 6rem;*/
+    /*min-height: 100%;*/
+    /*font-family: "Helvetica Neue", Arial, sans-serif;*/
+/*}*/

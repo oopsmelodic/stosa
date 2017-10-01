@@ -1,0 +1,9 @@
+{{#swiper-container pagination=true loop=true autoplay=4000}}
+    {{#each model as |slide|}}
+        {{#swiper-slide}}<div class="slide-label animated fadeIn"><legend>{{slide.slide-text}}</legend><button class="btn btn-primary">Перейти</button></div><img src="{{slide.url}}"  alt="Logo">{{slide.text}}{{/swiper-slide}}
+    {{/each}}
+{{/swiper-container}}
+{{outlet}}
+<div class="container">
+    {{#main-page}}{{/main-page}}
+</div>

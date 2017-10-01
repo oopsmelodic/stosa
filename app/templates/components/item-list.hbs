@@ -1,0 +1,9 @@
+{{#if isEqual}}
+    <div class="item col-lg-3 col-sm-3 col-md-3 animated fadeIn">
+        {{#link-to "items.show" item.name}}
+            <label>{{item.name}}</label>
+            <img class="items-img" src="{{image.src}}">
+        {{/link-to}}
+    </div>
+{{/if}}
+{{yield}}

@@ -1,0 +1,64 @@
+<div class="wrapper">
+    <div class="show-item container">
+        {{#link-to "items" class="fa fa-arrow-circle-o-left goback fa-2x"}} Кухни{{/link-to}}
+        <div class="col-lg-12">
+            <legend>Кухня {{item.name}}</legend>
+            <div class="col-lg-6">
+                <div class="col-lg-12">
+                    <p>{{item.description}}</p>
+                </div>
+                <div class="col-lg-12">
+                    <legend>Возможные цвета и исполнения: </legend>
+                    {{#justified-gallery}}
+                        {{#each colors as |color|}}
+                            <a href="{{color.src}}" data-lightbox="roadtrip" class="lightboxImg" data-title="{{color.title}}">
+                                <img src="{{color.src}}" alt="{{color.title}}">
+                            </a>
+                        {{/each}}
+                    {{/justified-gallery}}
+                </div>
+                <div class="col-lg-12">
+                    <legend>Узнать стоимость Кухни {{item.name}}</legend>
+                    <p>Каждая кухня индивидуальна и наши специалисты готовы помочь с расчетом.
+                        Мы предлагаем Вам заполнить эту простую форму.
+                        В поле комментарии необходимо указать размеры Вашей кухни, а также написать все Ваши пожелания относительно расположения элементов.</p>
+                    <div class="col-lg-12">
+                        <form {{action "sendRequest" on="submit"}}>
+                            <div class="form-group">
+                                <label for="name">Ваше Имя:</label>
+                                <!--<input type="text" class="form-control" id="name" placeholder="Введите имя">-->
+                                {{input id=name value=name class="form-control" placeholder="Введите имя"}}
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Ваш Телефон:</label>
+                                <!--<input type="text" class="form-control" id="phone" placeholder="Введите телефон">-->
+                                {{input id=phone value=phone class="form-control" placeholder="Введите телефон"}}
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Ваш E-mail:</label>
+                                <!--<input type="email" class="form-control" id="email" placeholder="Оставте ваш E-mail">-->
+                                {{input id=email value=email class="form-control" placeholder="Введите E-mail"}}
+                            </div>
+                            <div class="form-group">
+                                <label for="comment">Коментарий</label>
+                                <!--<textarea type="text" class="form-control" id="comment" placeholder="Оставте свой коментарий"></textarea>-->
+                                {{textarea id=comment value=comment class="form-control" placeholder="Оставте свой коментарий"}}
+                            </div>
+                            <button type="submit" class="btn btn-primary">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" id="gallery">
+                {{#justified-gallery}}
+                    {{#each images as |image|}}
+                        <a href="{{image.src}}" data-lightbox="roadtrip" class="lightboxImg" data-title="{{image.title}}">
+                            <img src="{{image.src}}" alt="{{image.title}}">
+                        </a>
+                    {{/each}}
+                {{/justified-gallery}}
+            </div>
+        </div>
+    </div>
+</div>
+{{outlet}}
